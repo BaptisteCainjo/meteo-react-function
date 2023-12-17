@@ -1,0 +1,42 @@
+.day-weather {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.25rem;
+    overflow: auto;
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        justify-items: center;
+        height: fit-content;
+        align-items: end;
+        font-weight: 500;
+
+        
+    p:first-child {
+        font-weight: 600;
+
+    }
+
+    &.traits{
+        height: 75px;
+    }
+
+        div {
+            height: 100%;
+            width: 25%;
+            margin: 0 13px;
+            background: $init-color-primary-sun;
+            border-radius: 4px 4px 0px 0px;
+        }
+
+        .traits {
+            justify-items: start;
+        }
+    }
+
+    .humidity {
+        color: $bkg-color-grey;
+        font-size: 16px;
+    }
+}

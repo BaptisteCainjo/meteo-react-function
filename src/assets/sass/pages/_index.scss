@@ -1,0 +1,147 @@
+.personal-infos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $margin-bottom-large;
+
+    .more {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        p {
+            background-color: white;
+            padding: 10px;
+            border-radius: $border-raduis-full;
+            cursor: pointer;
+            width: $width-height-p;
+            height: $width-height-p;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: $init-transition;
+
+
+            &:hover {
+                background: black;
+                color: white;
+                transition: $init-transition;
+            }
+        }
+
+        .active {
+            background: black;
+            color: white;
+        }
+
+
+        img {
+            width: $width-height-img;
+            height: $width-height-img;
+            border-radius: $small-border-raduis;
+            margin-left: 15px;
+        }
+    }
+}
+
+
+
+.highlights {
+    margin-bottom: 1rem;
+}
+
+.infos-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    column-gap: 4%;
+}
+
+.upcoming {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    margin-bottom: $margin-bottom-large;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+        width: min-content;
+
+        a {
+            background-color: #F1F1F1;
+            padding: 5px 12px;
+            border-radius: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            &:first-child img {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .disabled {
+        color: $bkg-color-grey;
+        cursor: default;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// LEFT
+.select-cities {
+    border: none;
+    border-bottom: solid 2px $init-color;
+    background-color: transparent;
+    width: 100%;
+    color: $init-color;
+    padding: .25rem .5rem;
+
+    &:focus {
+        outline: .5px solid $init-color;
+        border-radius: .25rem;
+    }
+
+    &::placeholder {
+        color: $init-color;
+    }
+
+}
+
+@media (min-width: 375px) {
+    .upcoming .button{
+        flex-direction: row;
+        width: auto;
+    }
+}
+
+@media (min-width: 640px) {
+    .infos-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .upcoming .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .infos-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
