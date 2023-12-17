@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 
-const API_KEY = '023498c2b000b913cf860edcfaeae043';
+const API_KEY = process.env.API_KEY;
 const UNITS = 'metric';
 
 export default class WeatherStore {
