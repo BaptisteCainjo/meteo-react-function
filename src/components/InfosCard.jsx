@@ -1,12 +1,12 @@
 import { observer } from "mobx-react";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { GlobalContext } from "../App";
 
 function InfoCard({ title, icon, number, addClass }) {
   const { weatherStore } = useContext(GlobalContext);
   const weather = weatherStore.weather;
 
-  const [loadingText, setLoadingText] = useState("Loading...");
+  const [loadingText] = useState("Loading...");
 
   const adjustedNumber =
     title === "Wind speed" || title === "Feel like" ? parseFloat(number) * 2 :
