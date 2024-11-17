@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Index from './pages/Index';
 import Page404 from './pages/Page404';
 import { Routes, Route } from 'react-router-dom'
